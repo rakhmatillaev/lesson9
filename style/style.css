@@ -1,0 +1,124 @@
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+}
+.grid-container {
+  background-color: blue;
+  width: 100%;
+  display: grid;
+  min-height: 800px;
+  /* grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+  grid-template-rows: repeat(3, 2fr) 1fr; */
+  gap: 20px;
+  padding: 20px;
+  grid-template-rows: 4;
+  grid-template-areas:
+    "massonry1 responsive overlap overlap"
+    "massonry1 fluid explicity_placed negative_spaces"
+    "flexible mansonry2 explicity_placed massonry3"
+    "DOM mansonry2 named named";
+}
+.grid-item {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.grid-item:nth-child(1) {
+  background-color: white;
+  grid-area: massonry1;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: aqua;
+  background-color: blue;
+}
+.grid-item:nth-child(2) {
+  background-color: white;
+  grid-area: responsive;
+}
+.grid-item:nth-child(3) {
+  background-color: white;
+  grid-area: overlap;
+}
+.grid-item:nth-child(4) {
+  background-color: white;
+  grid-area: fluid;
+}
+.grid-item:nth-child(5) {
+  background-color: white;
+  grid-area: explicity_placed;
+}
+.grid-item:nth-child(6) {
+  background-color: white;
+  grid-area: negative_spaces;
+}
+.grid-item:nth-child(7) {
+  background-color: white;
+  grid-area: flexible;
+}
+.grid-item:nth-child(8) {
+  background-color: white;
+  grid-area: mansonry2;
+}
+.grid-item:nth-child(9) {
+  background-color: white;
+  grid-area: massonry3;
+}
+.grid-item:nth-child(10) {
+  background-color: white;
+  grid-area: DOM;
+}
+.grid-item:nth-child(11) {
+  background-color: white;
+  grid-area: named;
+}
+.grid_container {
+  background-color: red;
+  width: 100%;
+  display: grid;
+  min-height: 700px;
+  height: auto;
+  /* grid-template-columns: repeat(auto-fill , minmax(400px, 2fr)); */
+  /* grid-template-rows: repeat(3, 2fr) 1fr; */
+  gap: 20px;
+  padding: 10px;
+  grid-template-rows: 20% 30% 30% 20%;
+  grid-template-areas:
+    "header header header header"
+    "nav content content sidebar"
+    "nav content content sidebar"
+    "footer footer footer footer";
+}
+.grid_items:nth-child(1) {
+  background-color: blue;
+  grid-area: header;
+  vertical-align: baseline;
+}
+.grid_items:nth-child(2) {
+  background-color: orange;
+  grid-area: nav;
+}
+.grid_items:nth-child(3) {
+  background-color: blue;
+  grid-area: content;
+}
+.grid_items:nth-child(4) {
+  background-color: rgb(255, 251, 0);
+  grid-area: sidebar;
+}
+.grid_items:nth-child(5) {
+  background-color: rgb(26, 209, 57);
+  grid-area: footer;
+}
+.grid_items{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
